@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "dev"};
+    agent any;
 
     stages {
 
@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t punits14/punit-app:latest .'
+                sh 'docker build -t punits14/manish-app:latest .'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
                 )]) {
                     sh '''
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                      docker push punits14/punit-app:latest
+                      docker push punits14/manish-app:latest
                     '''
                 }
             }
