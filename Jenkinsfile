@@ -57,7 +57,7 @@ pipeline {
             emailext(
                 to: 'punit117aws@gmail.com',
                 subject: 'Build SUCCESS : Demo CICD App',
-                body: 'Jenkins pipeline executed successfully ✅'
+                body: 'Jenkins pipeline executed successfully'
             )
         }
 
@@ -65,7 +65,7 @@ pipeline {
             emailext(
                 to: 'punit117aws@gmail.com',
                 subject: 'Build FAILED : Demo CICD App',
-                body: 'Jenkins pipeline failed ❌. Please check logs.'
+                body: 'Jenkins pipeline failed . Please check logs.'
             )
         }
     }
