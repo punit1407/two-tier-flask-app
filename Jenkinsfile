@@ -29,7 +29,7 @@ pipeline {
                 )]) {
                     sh '''
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                      docker push punit1407/punit-app:latest
+                      docker push punits14/punit-app:latest
                     '''
                 }
             }
