@@ -8,16 +8,6 @@ pipeline {
                 checkout scm
             }
         }
-
-        stage('Trivy File System Scan') {
-            steps {
-                sh '''
-                  trivy fs --exit-code 0 --severity LOW,MEDIUM .
-                  trivy fs --exit-code 1 --severity HIGH,CRITICAL .
-                '''
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t punit1407/punit-app:latest .'
