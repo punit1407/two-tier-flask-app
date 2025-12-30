@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t punit1407/punit-app:latest .'
+                sh 'docker build -t punits14/punit-app:latest .'
             }
         }
 
