@@ -5,9 +5,7 @@ pipeline{
     stages{
         stage("Code Clone"){
             steps{
-               script{
-                   clone("https://github.com/punit1407/two-tier-flask-app/", "master")
-               }
+                checkout scm
             }
         }
         stage("Trivy File System Scan"){
