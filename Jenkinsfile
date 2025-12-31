@@ -44,7 +44,7 @@ pipeline {
 
     post {
         success {
-            emailtext(
+            emailext(
                 to: 'punit117aws@gmail.com',
                 subject: 'Build SUCCESS : Demo CICD App',
                 body: 'Jenkins pipeline executed successfully'
@@ -52,7 +52,7 @@ pipeline {
         }
 
         failure {
-            emailtext(
+            emailext(
                 to: 'punit117aws@gmail.com',
                 subject: 'Build FAILED : Demo CICD App',
                 body: 'Jenkins pipeline failed . Please check logs.'
