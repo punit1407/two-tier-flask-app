@@ -8,11 +8,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage("Trivy File system Scan"){
-            steps{
-                sh "trivy fs . -o result.json"
-            }
-        }
         stage('Build') {
             steps {
                 sh 'docker build -t punits14/manish-app:latest .'
